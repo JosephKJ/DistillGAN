@@ -12,3 +12,15 @@ images are generated from descriptions of novel classes that are not seen during
 ### Results
 
 ![alt text](https://raw.githubusercontent.com/JosephKJ/DistillGAN/master/images/results.jpg)
+
+## Code
+
+Dependencies
+- Pytorch
+- Python 2.7
+
+Main File
+- main.py
+
+References
+- StackGAN v2: [Code](https://github.com/hanzhanggit/StackGAN-v2)
