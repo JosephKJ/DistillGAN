@@ -12,6 +12,3 @@ images are generated from descriptions of novel classes that are not seen during
 ### Results
 
 ![alt text](https://raw.githubusercontent.com/JosephKJ/DistillGAN/master/images/results.jpg)
-
-
-
