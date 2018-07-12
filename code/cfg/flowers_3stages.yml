@@ -1,0 +1,40 @@
+CONFIG_NAME: '3stages'
+
+DATASET_NAME: 'flowers'
+EMBEDDING_TYPE: 'cnn-rnn'
+DATA_DIR: '../data/flowers'
+VOCAB_FILENAME: 'flowers_vocab.pkl'
+GPU_ID: '0'
+WORKERS: 4
+
+TREE:
+    BRANCH_NUM: 3
+    MULTIPLE_TEXT_CONDITIONING: True
+    ENSURE_CAPTION_CONSISTENCY: True
+    MAX_CAPTION_LEN: 70
+    LSTM_INPUT_SIZE: 16 # Spatial size of the image feature maps, passed to the LSTM
+
+TRAIN:
+    FLAG: True
+    NET_G: ''   # '../output/birds_3stages/Model/netG_epoch_700.pth'
+    NET_D: ''   # '../output/birds_3stages/Model/netD'
+    NET_CCN: '' # '../output/birds_3stages/Model/CCN'
+    BATCH_SIZE: 24
+    MAX_EPOCH: 1800
+    SNAPSHOT_INTERVAL: 2000
+    DISCRIMINATOR_LR: 0.0002
+    GENERATOR_LR: 0.0002
+    COEFF:
+      UNCOND_LOSS: 1.0
+
+
+GAN:
+    EMBEDDING_DIM: 128
+    DF_DIM: 64
+    GF_DIM: 64
+    Z_DIM: 100
+    R_NUM: 2
+    B_CONDITION: True # Whether to have conditioning, or not.
+
+TEXT:
+    DIMENSION: 1024

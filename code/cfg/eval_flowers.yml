@@ -1,0 +1,30 @@
+CONFIG_NAME: '3stages'
+
+DATASET_NAME: 'flowers'
+EMBEDDING_TYPE: 'cnn-rnn'
+DATA_DIR: '../data/flowers'
+GPU_ID: '3'
+WORKERS: 4  # 4
+
+TREE:
+    BRANCH_NUM: 3
+    MULTIPLE_TEXT_CONDITIONING: True
+
+TEST:
+    B_EXAMPLE: False
+
+
+TRAIN:
+    FLAG: False
+    # NET_G: '../models/birds_3stages_CCN/netG_70000.pth'
+    NET_G: '../models/flowers_3stages_multicaption/netG_30000.pth'
+    BATCH_SIZE: 24
+
+
+GAN:
+    EMBEDDING_DIM: 128
+    DF_DIM: 64
+    GF_DIM: 64
+    Z_DIM: 100
+    R_NUM: 2
+    B_CONDITION: True
