@@ -15,7 +15,7 @@ images are generated from descriptions of novel classes that are not seen during
 
 ## Code
 
-Dependencies
+Build on top of
 - Pytorch
 - Python 2.7
 
